@@ -1,0 +1,3 @@
+git add -A
+git commit -m "delete wrong github/workflows folder"
+git push origin master
