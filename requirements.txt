@@ -1,0 +1,9 @@
+
+pytest
+CONFIG
+requests
+yaml
+json
+allure-pytest
+os
+base64

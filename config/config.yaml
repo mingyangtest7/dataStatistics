@@ -1,0 +1,11 @@
+base_url: "http://172.16.200.247:8500"
+test_account: "19054134384"
+
+image_path: "C:/Users/86176/Desktop/show_imgs/9.png"
+
+# 可以为不同的测试环境设置不同的配置
+# env:
+#   dev:
+#     base_url: "http://dev-server:7000"
+#   staging:
+#     base_url: "http://staging-server:7000" 

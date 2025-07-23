@@ -1,0 +1,27 @@
+
+[
+  {
+    "username": "test01",
+    "password": "adaspace2024",
+    "expected_code": "200",
+    "id": "正确账号_正确密码_正确验证码_正确verKey"
+  },
+  {
+    "username": "t",
+    "password": "adaspace2024",
+    "expected_code": "1004",
+    "id": "错误账号_正确密码_正确验证码_正确verKey"
+  },
+  {
+    "username": "test02",
+    "password": "wrongpass",
+    "expected_code": "10005",
+    "id": "正确账号_错误密码_正确验证码_正确verKey"
+  },
+  {
+    "username": "test03",
+    "password": "adaspace2024",
+    "expected_code": "401",
+    "id": "正确账号_正确密码_错误验证码_正确verKey"
+  }
+]

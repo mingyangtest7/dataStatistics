@@ -4,9 +4,10 @@ import allure
 import requests
 from config.config import CONFIG
 
+
 #创建新的权限组
 def test_create_permission(get_token):
-    url = f"{CONFIG['base_url']}/am/sys/user/edit"
+    url = f"{CONFIG['base_url']}/am/sys/role/addRole"
     headers = {"Authorization": get_token}
     payload = {
         "name":"权限测试一号",
@@ -15,12 +16,10 @@ def test_create_permission(get_token):
     }
     response = requests.post(url, headers=headers, json=payload)
     data = response.json()
-    if data["code"] == 200:
-        print(f"权限创建成功")
-    assert data["code"] == 200
+    if data["code"] == "200":
+        print(f"权限组创建成功")
+    assert data["code"] == "200"
     assert data["msg"] == "success"
-
-
 
 
 #获取新创建权限的id
@@ -40,14 +39,18 @@ def test_get_id(get_token):
             return id
 
 
-
-
+#删除新创建的权限组
 def test_delete_permission(get_token):
     id = test_get_id(get_token)
     url = f"{CONFIG['base_url']}/am/sys/role/deleteRole?roleId={id}"
     headers = {"Authorization": get_token}
     response = requests.get(url, headers=headers)
+    data = response.json()
+    if data["code"] == "200":
+        print(f"{id}：权限组删除成功")
+    assert data["code"] == "200"
+    assert data["msg"] == "success"
+    assert data["data"] == 1
 
 
 
-1943215315234111490
