@@ -2,8 +2,6 @@
 pytest
 CONFIG
 requests
-yaml
-json
+PyYAML
 allure-pytest
-os
-base64
+
