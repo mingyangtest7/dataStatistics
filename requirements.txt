@@ -4,4 +4,4 @@ CONFIG
 requests
 PyYAML
 allure-pytest
-
+fonttools
