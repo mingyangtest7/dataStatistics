@@ -28,7 +28,9 @@ import os
 
 #读取参数化测试数据
 def load_cases():
-    with open("C:/Users/86176/PycharmProjects/dataStatistics/tests/login/login_cases.json",  encoding="utf-8") as f:
+    current_dir = os.path.dirname(__file__)
+    json_path = os.path.join(current_dir, "login_cases.json")
+    with open(json_path, encoding="utf-8") as f:
         data = json.load(f)
     cases = [(d["username"], d["password"], d["expected_code"]) for d in data]
     ids = [d["id"] for d in data]
